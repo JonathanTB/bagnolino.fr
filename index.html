@@ -4,28 +4,119 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bagnolino — le carnet d'entretien de ta voiture</title>
-  <meta name="description" content="Bagnolino lit tes factures de garage et tient le carnet d'entretien de ta voiture. Historique prouvé, rappels, transmission à l'acheteur.">
-  <link rel="icon" href="/favicon.png">
+  <meta name="description" content="Bagnolino lit tes factures de garage et tient le carnet d'entretien de ta voiture. Historique prouvé, prochaines échéances, transmission à l'acheteur.">
+  <meta name="theme-color" content="#faf9f6">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bagnolino.fr/">
+  <meta property="og:title" content="Bagnolino — le carnet d'entretien de ta voiture">
+  <meta property="og:description" content="Photographie une facture de garage : Bagnolino tient le carnet, prévoit la suite et le transmet à l'acheteur le jour où tu vends.">
+  <meta property="og:image" content="https://bagnolino.fr/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.png" sizes="64x64">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="/fonts/instrument-sans-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header>
-    <img src="/apple-touch-icon.png" alt="">
-    <a href="/">Bagnolino</a>
+  <div class="taches" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <header class="entete verre">
+    <a class="marque" href="/"><i aria-hidden="true"></i>Bagnolino</a>
+    <nav aria-label="Principale">
+      <a href="/confidentialite/">Confidentialité</a>
+      <a href="/support/">Support</a>
+    </nav>
   </header>
-  <main class="hero">
-    <h1>Le carnet d'entretien de ta voiture, tenu par tes factures.</h1>
-    <p>Photographie une facture de garage : Bagnolino la lit, range l'opération dans le carnet, te rappelle la prochaine échéance, et transmet l'historique à l'acheteur le jour où tu vends.</p>
-    <p class="muted">Disponible sur iPhone. Gratuit pour une facture, abonnement ensuite.</p>
-    <!-- Remplacer par l'URL App Store dès que l'app a son identifiant. -->
-    <a class="store" href="https://apps.apple.com/fr/app/bagnolino/id0000000000">Télécharger sur l'App Store</a>
+
+  <main>
+    <section class="hero large">
+      <div class="accroche">
+        <p class="surtitre">Carnet d'entretien · iPhone</p>
+        <h1>Le carnet d'entretien de ta voiture, tenu par tes factures.</h1>
+        <p class="chapo">Photographie une facture de garage : Bagnolino la lit, range chaque opération dans le carnet, prévoit la prochaine échéance, et transmet tout l'historique à l'acheteur le jour où tu vends.</p>
+        <!-- Remplacer id0000000000 par l'Apple ID de l'app (App Store Connect → Informations sur l'app). -->
+        <a class="bouton" href="https://apps.apple.com/fr/app/bagnolino/id0000000000">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+          Télécharger sur l'App Store
+        </a>
+        <p class="mention">Gratuit pour une voiture et une facture. Abonnement ensuite.</p>
+      </div>
+      <div class="ecran">
+        <img src="/img/accueil.webp" width="564" height="1044" alt="L'écran d'accueil de Bagnolino : une Peugeot 308, la courroie de distribution à faire maintenant, les prochaines échéances et les factures déjà enregistrées.">
+      </div>
+    </section>
+
+    <section class="temps large" aria-labelledby="temps">
+      <h2 id="temps">Trois gestes, un carnet complet</h2>
+
+      <article class="etape verre">
+        <div class="texte">
+          <span class="numero" aria-hidden="true">1</span>
+          <h3>Photographie la facture</h3>
+          <p>Bagnolino lit la date, le kilométrage, chaque opération et son prix. Tu vérifies, tu corriges si besoin, tu enregistres.</p>
+          <p>La facture originale est gardée avec l'entrée : c'est elle qui fait la preuve.</p>
+        </div>
+        <div class="ecran">
+          <img src="/img/scan.webp" width="564" height="1044" loading="lazy" alt="L'écran de vérification d'une facture scannée : date, kilométrage et trois opérations reconnues, avec leur prix.">
+        </div>
+      </article>
+
+      <article class="etape verre">
+        <div class="texte">
+          <span class="numero" aria-hidden="true">2</span>
+          <h3>Sache ce qui arrive</h3>
+          <p>Les prochaines échéances sont calculées sur ta façon de rouler, avec ce qu'elles devraient coûter. Plus de courroie oubliée, plus de vidange au hasard.</p>
+          <p>Avec l'abonnement, une notification te prévient à temps.</p>
+        </div>
+        <div class="ecran">
+          <img src="/img/echeances.webp" width="564" height="1044" loading="lazy" alt="La liste de toutes les échéances : 1 340 € à prévoir sur douze mois, de la courroie de distribution au liquide de refroidissement.">
+        </div>
+      </article>
+
+      <article class="etape verre">
+        <div class="texte">
+          <span class="numero" aria-hidden="true">3</span>
+          <h3>Transmets le carnet</h3>
+          <p>Le jour où tu vends, un code suffit : l'acheteur reçoit tout l'historique, factures comprises. Un entretien prouvé, ça se voit dans le prix.</p>
+          <p>Tu peux aussi exporter le carnet en PDF.</p>
+        </div>
+        <div class="ecran">
+          <img src="/img/transfert.webp" width="564" height="1044" loading="lazy" alt="L'écran de transfert du carnet : un code à donner à l'acheteur, valable quelques jours.">
+        </div>
+      </article>
+    </section>
+
+    <section class="bandeau large" aria-label="Nos engagements">
+      <div class="verre">
+        <h3>La preuve, pas une saisie</h3>
+        <p>Chaque ligne du carnet renvoie à la facture du garage. Rien n'y entre sans elle.</p>
+      </div>
+      <div class="verre">
+        <h3>Tes données restent les tiennes</h3>
+        <p>Pas de publicité, pas de revente. Supprimer ton compte efface tout, tout de suite. <a href="/confidentialite/">Le détail</a></p>
+      </div>
+      <div class="verre">
+        <h3>Ta plaque suffit</h3>
+        <p>Saisis ton immatriculation : marque, modèle et motorisation se remplissent tout seuls.</p>
+      </div>
+    </section>
+
+    <section class="large">
+      <div class="final verre">
+        <h2>Ta voiture mérite mieux qu'une boîte à gants.</h2>
+        <p>Commence avec ta dernière facture de garage.</p>
+        <a class="bouton" href="https://apps.apple.com/fr/app/bagnolino/id0000000000">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+          Télécharger sur l'App Store
+        </a>
+      </div>
+    </section>
   </main>
-  <footer>
+
+  <footer class="pied">
     <a href="/confidentialite/">Confidentialité</a>
     <a href="/support/">Support</a>
+    <a href="/mentions-legales/">Mentions légales</a>
     <span>© 2026 Pamina Studio</span>
   </footer>
 </body>

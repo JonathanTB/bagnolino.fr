@@ -4,29 +4,51 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Politique de confidentialité — Bagnolino</title>
-  <link rel="icon" href="/favicon.png">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.png" sizes="64x64">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Quelles données Bagnolino traite, pourquoi, avec qui, combien de temps, et comment en reprendre le contrôle.">
+  <meta name="theme-color" content="#faf9f6">
+  <link rel="preload" href="/fonts/instrument-sans-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header>
-    <img src="/apple-touch-icon.png" alt="">
-    <a href="/">Bagnolino</a>
+  <div class="taches" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <header class="entete verre">
+    <a class="marque" href="/"><i aria-hidden="true"></i>Bagnolino</a>
+    <nav aria-label="Principale">
+      <a href="/confidentialite/" aria-current="page">Confidentialité</a>
+      <a href="/support/">Support</a>
+    </nav>
   </header>
-  <main>
+  <main class="page etroit">
     <h1>Politique de confidentialité</h1>
-    <p class="muted">Dernière mise à jour : 23 septembre 2026</p>
+    <p class="date">Dernière mise à jour : 23 septembre 2026</p>
 
-    <p>Bagnolino est un carnet d'entretien automobile. Vous y déposez les factures de vos véhicules, l'application en lit le contenu, et vous garde un historique prouvé que vous pouvez transmettre à l'acheteur le jour où vous vendez.</p>
+    <nav class="sommaire verre" aria-labelledby="sommaire">
+      <p class="surtitre" id="sommaire">Sommaire</p>
+      <ol>
+        <li><a href="#s1">1. Qui est responsable du traitement</a></li>
+        <li><a href="#s2">2. Ce que nous traitons, et pourquoi</a></li>
+        <li><a href="#s3">3. Avec qui ces données sont partagées</a></li>
+        <li><a href="#s4">4. Combien de temps</a></li>
+        <li><a href="#s5">5. Supprimer votre compte</a></li>
+        <li><a href="#s6">6. Vos autres droits</a></li>
+        <li><a href="#s7">7. Bases légales</a></li>
+        <li><a href="#s8">8. Modifications</a></li>
+      </ol>
+    </nav>
+
+    <article class="feuille verre">
+
+    <p class="intro">Bagnolino est un carnet d'entretien automobile. Vous y déposez les factures de vos véhicules, l'application en lit le contenu, et vous garde un historique prouvé que vous pouvez transmettre à l'acheteur le jour où vous vendez.</p>
     <p>Cette politique explique quelles données nous traitons, pourquoi, avec qui, combien de temps, et comment vous en reprenez le contrôle.</p>
 
-    <h2>1. Qui est responsable du traitement</h2>
+    <h2 id="s1">1. Qui est responsable du traitement</h2>
     <p>Pamina Studio, SAS, 60 rue François 1er, 75008 Paris, France.<br>
-    Contact pour toute question ou demande relative à vos données : <a href="mailto:ADRESSE-DE-CONTACT">ADRESSE-DE-CONTACT</a>.</p>
+    Contact pour toute question ou demande relative à vos données : <a href="mailto:ADRESSE-DE-CONTACT"><span class="a-remplir">ADRESSE-DE-CONTACT</span></a>.</p>
 
-    <h2>2. Ce que nous traitons, et pourquoi</h2>
+    <h2 id="s2">2. Ce que nous traitons, et pourquoi</h2>
     <p><strong>Votre compte</strong> — votre adresse email et votre mot de passe (que nous ne voyons jamais en clair : il est haché par notre hébergeur d'authentification), un nom d'affichage dérivé de votre adresse, et votre pays. Si vous choisissez « Se connecter avec Apple », nous recevons d'Apple un identifiant de connexion et l'adresse email que vous avez choisi de partager, éventuellement une adresse relais fournie par Apple ; il n'y a alors pas de mot de passe. Sans compte, pas de carnet.</p>
     <p><strong>Vos véhicules</strong> — marque, modèle, année, carburant, kilométrage, et la plaque d'immatriculation lorsque vous la renseignez. La plaque sert à pré-remplir la fiche du véhicule et à reconnaître un véhicule sur une facture.</p>
     <p><strong>Vos factures</strong> — le document lui-même (photo ou PDF), sa date, le kilométrage, les opérations qu'il porte et leur prix. <strong>Une facture de garage contient généralement votre nom, parfois votre adresse et votre plaque</strong> : nous la conservons telle que vous l'avez déposée, parce que c'est elle qui fait la preuve. Nous conservons également le résultat brut de la lecture automatique, pour pouvoir corriger une extraction défaillante sans vous demander de rescanner.</p>
@@ -34,8 +56,9 @@
     <p><strong>Votre abonnement</strong> — son état et sa date d'expiration. Nous ne voyons <strong>jamais</strong> vos moyens de paiement : l'achat se fait entièrement chez Apple.</p>
     <p><strong>Des journaux techniques</strong> — le nombre de lectures automatiques et de saisies de code de transfert, par compte et par jour, pour empêcher les abus.</p>
 
-    <h2>3. Avec qui ces données sont partagées</h2>
+    <h2 id="s3">3. Avec qui ces données sont partagées</h2>
     <p>Nous ne vendons ni ne louons vos données. Nous faisons appel aux prestataires suivants, chacun pour une fonction précise :</p>
+    <div class="tableau">
     <table>
       <tr><th>Prestataire</th><th>Ce qu'il reçoit</th><th>Pourquoi</th></tr>
       <tr><td><strong>Supabase</strong></td><td>compte, véhicules, factures et leurs documents</td><td>hébergement, base de données, stockage, authentification</td></tr>
@@ -46,6 +69,7 @@
       <tr><td><strong>Expo</strong></td><td>les identifiants d'appareil</td><td>envoi des notifications</td></tr>
       <tr><td><strong>OVH</strong></td><td>le trafic de l'application</td><td>hébergement du service</td></tr>
     </table>
+    </div>
 
     <div class="note attention">
       <p><strong>Deux points méritent d'être dits clairement.</strong></p>
@@ -53,11 +77,11 @@
       <p>La <strong>recherche par plaque</strong> ne rend que les caractéristiques techniques du véhicule — marque, modèle, motorisation. Elle ne rend, et nous ne conservons, <strong>aucune information sur le titulaire de la carte grise</strong>.</p>
     </div>
 
-    <h2>4. Combien de temps</h2>
+    <h2 id="s4">4. Combien de temps</h2>
     <p>Vos données restent tant que votre compte existe. Ensuite, voyez le point 5.</p>
     <p>Deux exceptions. Un <strong>carnet exporté en PDF</strong> est effacé de nos serveurs au bout de <strong>sept jours</strong> (le fichier que vous avez enregistré sur votre téléphone, lui, vous appartient). Les <strong>caractéristiques techniques associées à une plaque</strong> (marque, modèle, motorisation, numéro de série, et la réponse brute du service) sont gardées <strong>sans limite de durée</strong> et revérifiées tous les trois ans, pour ne pas réinterroger le service à chaque fois. Ce cache n'est rattaché à aucun compte et ne contient aucune information sur le titulaire du véhicule.</p>
 
-    <h2>5. Supprimer votre compte</h2>
+    <h2 id="s5">5. Supprimer votre compte</h2>
     <p><strong>Depuis l'application : Réglages → « Supprimer mon compte ».</strong> Votre mot de passe vous est redemandé (ou, pour un compte Apple, une confirmation par Apple), et c'est fait.</p>
     <p><strong>La suppression est immédiate et définitive.</strong> Votre compte n'est pas désactivé, pas mis de côté, pas conservé « au cas où » : il n'existe plus, et rien ne le ramène.</p>
     <p><strong>Ce qui part</strong> : vos véhicules, vos factures et leurs documents, vos périodes de possession, vos échéances et vos rappels, vos exports, les identifiants de vos appareils, et votre profil. Si votre compte ne se connecte que par Apple, l'autorisation donnée à Bagnolino est aussi révoquée chez Apple.</p>
@@ -72,19 +96,21 @@
       <p><strong>Votre abonnement n'est pas résilié par la suppression de votre compte.</strong> Nous ne pouvons pas le résilier à votre place : seul l'App Store le peut. Faites-le avant de partir, dans <strong>Réglages iOS → votre nom → Abonnements</strong>, sans quoi Apple continuera de vous facturer un compte qui n'existe plus.</p>
     </div>
 
-    <h2>6. Vos autres droits</h2>
-    <p>Vous pouvez demander l'accès à vos données, leur correction, leur portabilité, ou vous opposer à un traitement. L'application ne propose pas encore ces demandes en libre-service : écrivez à <a href="mailto:ADRESSE-DE-CONTACT">ADRESSE-DE-CONTACT</a>, nous répondons sous un mois.</p>
+    <h2 id="s6">6. Vos autres droits</h2>
+    <p>Vous pouvez demander l'accès à vos données, leur correction, leur portabilité, ou vous opposer à un traitement. L'application ne propose pas encore ces demandes en libre-service : écrivez à <a href="mailto:ADRESSE-DE-CONTACT"><span class="a-remplir">ADRESSE-DE-CONTACT</span></a>, nous répondons sous un mois.</p>
     <p>Vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> (<a href="https://www.cnil.fr">www.cnil.fr</a>), l'autorité française de protection des données.</p>
 
-    <h2>7. Bases légales</h2>
+    <h2 id="s7">7. Bases légales</h2>
     <p>Le traitement de votre compte, de vos véhicules et de vos factures repose sur l'<strong>exécution du contrat</strong> qui nous lie — c'est le service lui-même. Les journaux techniques anti-abus et la conservation des factures transmises à un acheteur reposent sur l'<strong>intérêt légitime</strong>. Les notifications reposent sur votre <strong>consentement</strong>, que vous retirez à tout moment dans les réglages de votre téléphone.</p>
 
-    <h2>8. Modifications</h2>
+    <h2 id="s8">8. Modifications</h2>
     <p>Toute modification de cette politique sera publiée sur cette page, avec sa date. Un changement substantiel vous sera signalé dans l'application.</p>
+    </article>
   </main>
-  <footer>
+  <footer class="pied">
     <a href="/confidentialite/">Confidentialité</a>
     <a href="/support/">Support</a>
+    <a href="/mentions-legales/">Mentions légales</a>
     <span>© 2026 Pamina Studio</span>
   </footer>
 </body>

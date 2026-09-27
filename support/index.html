@@ -4,31 +4,62 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Support — Bagnolino</title>
-  <link rel="icon" href="/favicon.png">
+  <meta name="description" content="Une question, un bug, une facture mal lue ? Contacter l'équipe Bagnolino et réponses aux questions fréquentes.">
+  <meta name="theme-color" content="#faf9f6">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.png" sizes="64x64">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="/fonts/instrument-sans-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header>
-    <img src="/apple-touch-icon.png" alt="">
-    <a href="/">Bagnolino</a>
+  <div class="taches" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+  <header class="entete verre">
+    <a class="marque" href="/"><i aria-hidden="true"></i>Bagnolino</a>
+    <nav aria-label="Principale">
+      <a href="/confidentialite/">Confidentialité</a>
+      <a href="/support/" aria-current="page">Support</a>
+    </nav>
   </header>
-  <main>
-    <h1>Support</h1>
-    <p>Une question, un bug, une facture mal lue ? Écris-nous, nous répondons sous quelques jours.</p>
-    <p><a href="mailto:ADRESSE-DE-CONTACT">ADRESSE-DE-CONTACT</a></p>
-    <p class="muted">Pour aller plus vite, indique la version de l'app : elle est affichée en bas de l'écran Réglages.</p>
 
-    <h2>Questions fréquentes</h2>
-    <p><strong>Comment supprimer mon compte ?</strong><br>Dans l'app : Réglages → « Supprimer mon compte ». C'est immédiat et définitif. Pense à résilier ton abonnement avant, dans les réglages iOS, Bagnolino ne peut pas le faire à ta place.</p>
-    <p><strong>Comment gérer ou résilier mon abonnement ?</strong><br>Réglages iOS → ton nom → Abonnements. L'abonnement est géré par Apple, pas par nous.</p>
-    <p><strong>Où vont mes factures ?</strong><br>Tout est expliqué dans la <a href="/confidentialite/">politique de confidentialité</a>.</p>
+  <main class="page etroit">
+    <h1>Support</h1>
+    <p class="intro">Une question, un bug, une facture mal lue ? Écris-nous, nous répondons sous quelques jours.</p>
+
+    <div class="contact verre">
+      <div>
+        <p class="titre">Nous écrire</p>
+        <p><a href="mailto:ADRESSE-DE-CONTACT"><span class="a-remplir">ADRESSE-DE-CONTACT</span></a></p>
+      </div>
+      <a class="bouton" href="mailto:ADRESSE-DE-CONTACT">Envoyer un email</a>
+      <p class="muted">Pour aller plus vite, indique la version de l'app : elle est affichée en bas de l'écran Réglages.</p>
+    </div>
+
+    <section class="faq" aria-labelledby="faq">
+      <h2 id="faq">Questions fréquentes</h2>
+      <details class="verre">
+        <summary>Comment supprimer mon compte ?</summary>
+        <p>Dans l'app : Réglages → « Supprimer mon compte ». C'est immédiat et définitif. Pense à résilier ton abonnement avant, dans les réglages iOS : Bagnolino ne peut pas le faire à ta place.</p>
+      </details>
+      <details class="verre">
+        <summary>Comment gérer ou résilier mon abonnement ?</summary>
+        <p>Réglages iOS → ton nom → Abonnements. L'abonnement est géré par Apple, pas par nous.</p>
+      </details>
+      <details class="verre">
+        <summary>Comment transmettre le carnet à l'acheteur de ma voiture ?</summary>
+        <p>Dans l'app : Réglages → « Transférer à un acheteur ». Tu obtiens un code à lui donner ; il ouvre Bagnolino, choisit « J'ai reçu un véhicule » et saisit ce code. Rien ne change tant qu'il ne l'a pas fait.</p>
+      </details>
+      <details class="verre">
+        <summary>Où vont mes factures ?</summary>
+        <p>Tout est expliqué dans la <a href="/confidentialite/">politique de confidentialité</a>.</p>
+      </details>
+    </section>
   </main>
-  <footer>
+
+  <footer class="pied">
     <a href="/confidentialite/">Confidentialité</a>
     <a href="/support/">Support</a>
+    <a href="/mentions-legales/">Mentions légales</a>
     <span>© 2026 Pamina Studio</span>
   </footer>
 </body>
